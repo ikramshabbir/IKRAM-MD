@@ -21,7 +21,7 @@ A feature-rich WhatsApp bot built with Node.js & Baileys
 
 X-ANSARI MD is a modern, modular and feature-rich WhatsApp bot designed to provide a fast and powerful WhatsApp automation experience.
 
-Built with Node.js and Baileys, X-ANSARI combines media tools, group management, owner controls, utilities, automation and a modular plugin architecture into one bot.
+Built with Node.js and Baileys, X-ANSARI combines media tools, group management, owner controls, utilities, automation and a modular plugin architecture into one powerful WhatsApp bot.
 
 «🦅 X-ANSARI — More than a bot. A complete WhatsApp experience.»
 
@@ -75,8 +75,6 @@ Built with Node.js and Baileys, X-ANSARI combines media tools, group management,
 
 📦 Requirements
 
-Before installing X-ANSARI, make sure your environment has:
-
 Requirement| Version
 Node.js| 20+
 npm| Latest recommended
@@ -104,7 +102,7 @@ cd X-ANSARI
 
 npm install
 
-For environments where optional/native dependencies need to be built:
+If your environment needs optional/native dependencies:
 
 npm install --include=optional --foreground-scripts
 
@@ -112,19 +110,15 @@ npm install --include=optional --foreground-scripts
 
 3️⃣ Configure environment
 
-Create your environment file:
+If ".env.example" exists:
 
 cp .env.example .env
 
-If ".env.example" does not exist, create ".env" manually:
+Otherwise create:
 
 nano .env
 
----
-
-⚙️ Configuration
-
-A typical ".env" configuration can look like:
+Example configuration:
 
 BOT_MODE=public
 BOT_LANG=en
@@ -136,35 +130,37 @@ SUDO=
 STICKER_PACKNAME=X-ANSARI
 STICKER_AUTHOR=X-ANSARI
 
-🔧 Configuration options
+---
+
+⚙️ Configuration
 
 Variable| Description
-"BOT_MODE"| Bot mode: "public" or "private"
+"BOT_MODE"| "public" or "private"
 "BOT_LANG"| Bot language
 "PREFIX"| Command prefix
 "SUDO"| Additional privileged users
 "STICKER_PACKNAME"| Sticker pack name
 "STICKER_AUTHOR"| Sticker author
 
-«⚠️ Do not upload your real ".env" file or authentication credentials to GitHub.»
+«⚠️ Never upload your real ".env" file or authentication credentials to GitHub.»
 
 ---
 
-▶️ Start X-ANSARI
+▶️ Start the Bot
 
-Start the bot with:
+Start X-ANSARI with:
 
 npm start
 
-The bot will initialize its database, plugins and WhatsApp connection.
+The bot initializes its database, plugins and WhatsApp connection automatically.
 
 ---
 
 📱 WhatsApp Pairing
 
-On first startup, follow the pairing/login instructions provided by the bot.
+On the first startup, follow the pairing/login instructions displayed by the bot.
 
-After authentication, the session is stored locally so the bot can reconnect without requiring repeated pairing.
+Once authentication is completed, the session is stored locally so the bot can reconnect without requiring repeated pairing.
 
 «🔐 Never share your WhatsApp authentication/session files.»
 
@@ -172,11 +168,11 @@ After authentication, the session is stored locally so the bot can reconnect wit
 
 🧩 Commands
 
-The default command prefix is:
+The default prefix is:
 
 .
 
-For example:
+Examples:
 
 .ping
 .menu
@@ -184,7 +180,7 @@ For example:
 
 ---
 
-⚡ General Commands
+⚡ General
 
 Command| Description
 ".ping"| Check bot response
@@ -193,15 +189,15 @@ Command| Description
 
 ---
 
-👑 Owner Commands
+👑 Owner
 
-Owner commands are restricted to authorized users.
-
-Examples include:
+Examples:
 
 .broadcast
 .repeat
 .exif
+
+Owner commands are restricted to authorized users.
 
 ---
 
@@ -215,20 +211,21 @@ Depending on enabled plugins:
 .promote
 .demote
 
-Additional group features may include:
+Group features can include:
 
-- Anti-link
-- Anti-spam
-- Welcome messages
-- Goodbye messages
-- Warning system
-- Plugin restrictions
+- 🔗 Anti-link
+- 🚫 Anti-spam
+- 👋 Welcome messages
+- 👋 Goodbye messages
+- ⚠️ Warning system
+- 🔇 User mute management
+- ⚙️ Per-group settings
 
 ---
 
-🎨 Media Commands
+🎨 Media
 
-X-ANSARI provides various media utilities, including:
+Examples:
 
 .sticker
 .ttp
@@ -237,23 +234,23 @@ X-ANSARI provides various media utilities, including:
 .quote
 .fancy
 
-Available commands depend on the currently installed plugins.
+Available commands depend on the installed plugins.
 
 ---
 
 🤖 AutoReact
 
-X-ANSARI includes a lightweight keyword-based automatic reaction system.
+X-ANSARI includes a lightweight local keyword-based AutoReact system.
 
-It can be controlled through:
+Control it with:
 
 .autoreact on
 .autoreact off
 .autoreact status
 
-AutoReact is designed around local keyword/category matching rather than requiring an external AI API.
+AutoReact uses local keyword/category matching and does not require an external AI API for its reaction engine.
 
-Supported reaction categories can include:
+Possible categories include:
 
 - ❤️ Love
 - 😂 Funny
@@ -279,6 +276,7 @@ X-ANSARI/
 ├── package.json
 ├── package-lock.json
 ├── .env
+├── .gitignore
 │
 ├── src/
 │   │
@@ -306,11 +304,11 @@ X-ANSARI/
 
 ---
 
-🧩 Plugin System
+🧩 Plugin Architecture
 
-X-ANSARI uses a modular command/plugin architecture.
+X-ANSARI uses a modular command/plugin system.
 
-A typical plugin can register a command using:
+Example:
 
 command(
   {
@@ -320,90 +318,72 @@ command(
     type: "misc",
   },
   async (message, conn) => {
-    // command logic
+    // Command logic
   }
 );
 
-This makes it easy to add, remove or maintain individual commands without modifying the entire bot.
+This allows individual commands to be added, removed and maintained independently.
 
 ---
 
 ⚡ Performance
 
-X-ANSARI is designed around lightweight command processing.
+X-ANSARI is designed with lightweight command processing in mind.
 
-The bot includes:
+Performance features
 
-- ⚡ Fast command execution
+- ⚡ Fast command detection
+- 🚀 Lightweight command execution
 - 🧠 Command caching where appropriate
 - 💾 Persistent settings
-- 🔄 Connection recovery
+- 🔄 Automatic connection recovery
 - 🧩 Modular processing
-- 🚀 Optimized lightweight command paths
+- ⚡ Optimized lightweight command paths
 
-For example:
+Example:
 
 .ping
-      ↓
+   │
+   ▼
 Command Detection
-      ↓
+   │
+   ▼
 Fast Execution
-      ↓
+   │
+   ▼
 Pong
 
 ---
 
 🎬 FFmpeg
 
-FFmpeg is required by several media-related commands.
+FFmpeg is required by several media commands.
 
-Check whether FFmpeg is available:
+Check installation:
 
 ffmpeg -version
 
-If your hosting environment already provides FFmpeg, X-ANSARI can use the available binary.
+Find FFmpeg:
 
-For Termux:
+which ffmpeg
+
+Termux
 
 pkg install ffmpeg
 
 ---
 
-🖥️ Deployment
+📱 Termux Deployment
 
-X-ANSARI can run on multiple environments.
-
-📱 Termux
-
-Install Node.js and required packages, then:
+Clone:
 
 git clone https://github.com/ikramshabbir/X-ANSARI.git
-cd X-ANSARI
-npm install
-npm start
 
-For keeping the bot running:
+Enter:
 
-npm install -g pm2
-
-Then:
-
-pm2 start index.js --name X-ANSARI
-
-Save the process:
-
-pm2 save
-
----
-
-☁️ VPS / Linux
-
-Clone the repository:
-
-git clone https://github.com/ikramshabbir/X-ANSARI.git
 cd X-ANSARI
 
-Install dependencies:
+Install:
 
 npm install
 
@@ -411,18 +391,59 @@ Start:
 
 npm start
 
-For production:
+PM2
+
+Install PM2:
+
+npm install -g pm2
+
+Start:
+
+pm2 start index.js --name X-ANSARI
+
+Save:
+
+pm2 save
+
+Check:
+
+pm2 status
+
+Logs:
+
+pm2 logs X-ANSARI
+
+---
+
+☁️ VPS / Linux Deployment
+
+Clone:
+
+git clone https://github.com/ikramshabbir/X-ANSARI.git
+cd X-ANSARI
+
+Install:
+
+npm install
+
+Start:
+
+npm start
+
+Production with PM2
 
 pm2 start index.js --name X-ANSARI
 pm2 save
 
+Check:
+
+pm2 status
+
 ---
 
-🐳 Docker
+🐳 Docker Deployment
 
-A Docker-based deployment can be created using a Node.js 20+ image.
-
-Example:
+Example "Dockerfile":
 
 FROM node:20
 
@@ -444,7 +465,7 @@ Run:
 
 docker run -d --name x-ansari x-ansari
 
-«⚠️ Make sure persistent storage is configured for authentication/session data.»
+«⚠️ Configure persistent storage for authentication/session data when using containers.»
 
 ---
 
@@ -452,14 +473,15 @@ docker run -d --name x-ansari x-ansari
 
 Never expose:
 
-- ".env"
-- WhatsApp session/authentication files
-- Database credentials
-- API keys
-- Hosting credentials
-- GitHub tokens
+.env
+WhatsApp session files
+Authentication credentials
+Database credentials
+API keys
+Hosting credentials
+GitHub tokens
 
-Add sensitive files to ".gitignore":
+Recommended ".gitignore":
 
 .env
 *.db
@@ -472,7 +494,7 @@ logs/
 
 🛠️ Troubleshooting
 
-Bot does not start
+Bot doesn't start
 
 Check Node:
 
@@ -489,9 +511,9 @@ npm install
 
 ---
 
-FFmpeg not detected
+FFmpeg isn't detected
 
-Check:
+Run:
 
 which ffmpeg
 
@@ -501,13 +523,13 @@ ffmpeg -version
 
 ---
 
-SQLite errors
+SQLite error
 
-Reinstall native dependencies:
+Install optional/native dependencies:
 
 npm install --include=optional --foreground-scripts
 
-Then test:
+Test SQLite:
 
 node -e "const Database=require('better-sqlite3'); const db=new Database(':memory:'); console.log('SQLITE WORKING'); db.close()"
 
@@ -517,15 +539,13 @@ SQLITE WORKING
 
 ---
 
-🔄 Updating
+🔄 Update X-ANSARI
 
-Before updating, make sure your local changes are committed.
-
-Pull the latest version:
+Pull the latest changes:
 
 git pull origin main
 
-Install updated dependencies:
+Install dependencies:
 
 npm install
 
@@ -535,23 +555,27 @@ npm start
 
 ---
 
-📌 Development
+👨‍💻 Development
 
-Clone the repository:
+Clone:
 
 git clone https://github.com/ikramshabbir/X-ANSARI.git
+cd X-ANSARI
 
 Create a branch:
 
 git checkout -b feature/my-feature
 
-Make your changes and test:
+Check JavaScript syntax:
 
 node --check index.js
 
-Commit:
+Stage:
 
 git add .
+
+Commit:
+
 git commit -m "Add new feature"
 
 Push:
@@ -582,11 +606,11 @@ Pull Request
 
 Please keep contributions:
 
-- Clean
-- Modular
-- Tested
-- Documented
-- Compatible with the existing architecture
+- 🧹 Clean
+- 🧩 Modular
+- 🧪 Tested
+- 📚 Documented
+- 🔒 Secure
 
 ---
 
@@ -601,15 +625,19 @@ When reporting an issue, include:
 - Relevant logs
 - Steps to reproduce
 
-Please never share authentication/session credentials in an issue.
+Never include:
+
+- WhatsApp session credentials
+- Authentication files
+- Passwords
+- API keys
+- GitHub tokens
 
 ---
 
 📜 License
 
-This project is provided for personal and educational use.
-
-Please review the repository license before redistributing or publishing modified versions.
+Please review the repository's license before redistributing or publishing modified versions.
 
 ---
 
@@ -617,27 +645,44 @@ Please review the repository license before redistributing or publishing modifie
 
 <div align="center">🦅 X-ANSARI MD
 
-Developed & maintained by
+Developed & Maintained By
 
 IKRAM SHABBIR
 
 <p>
-  <b>⚡ Speed</b> •
-  <b>🛡️ Stability</b> •
-  <b>🧩 Modularity</b> •
+  <b>⚡ Speed</b>
+  &nbsp;•&nbsp;
+  <b>🛡️ Stability</b>
+  &nbsp;•&nbsp;
+  <b>🧩 Modularity</b>
+  &nbsp;•&nbsp;
   <b>🚀 Innovation</b>
 </p>---
 
 ❤️ Special Thanks
 
-To the open-source developers and projects that make WhatsApp automation possible.
+To the open-source developers, contributors and projects that make WhatsApp automation possible.
 
-Special thanks to the Baileys ecosystem and all contributors whose work helps power projects like X-ANSARI.
+Special thanks to the Baileys ecosystem and its contributors.
 
 ---
 
-<p>
-  <b>⭐ Star the repository if you like X-ANSARI</b>
-</p><p>
-  <b>🦅 X-ANSARI — Built with passion, powered by code.</b>
-</p></div>
+⭐ Support the Project
+
+If you find X-ANSARI MD useful:
+
+⭐ Star the repository
+
+🍴 Fork the project
+
+🐛 Report bugs
+
+💡 Suggest improvements
+
+---
+
+<br>🦅 X-ANSARI
+
+Built with passion. Powered by code.
+
+</div>
