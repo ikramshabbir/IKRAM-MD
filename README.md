@@ -615,7 +615,7 @@ Please review the repository license before redistributing or publishing modifie
 
 <b>👑 Credits</b>
 
-<div align="center">🦅 X-ANSARI MD
+<div align="center"><b>🦅 X-ANSARI MD</b>
 
 Developed & maintained by
 
