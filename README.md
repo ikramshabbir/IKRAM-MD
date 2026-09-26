@@ -605,7 +605,7 @@ Please never share authentication/session credentials in an issue.
 
 ---
 
-📜 License
+<b>📜 License</b>
 
 This project is provided for personal and educational use.
 
@@ -613,7 +613,7 @@ Please review the repository license before redistributing or publishing modifie
 
 ---
 
-👑 Credits
+<b>👑 Credits</b>
 
 <div align="center">🦅 X-ANSARI MD
 
