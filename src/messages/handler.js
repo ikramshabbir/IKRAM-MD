@@ -916,6 +916,32 @@ export async function messageHandler(
       name
     );
 
+    /* =====================================================
+     * FAST PATH — PING
+     * Skip non-essential policy/access/group checks.
+     * Ping is a public, harmless response command.
+     * ===================================================== */
+    if (name === "ping") {
+      try {
+        const start = Date.now();
+        await command.function(
+          message,
+          conn,
+          sessionId
+        );
+        console.log(
+          "⚡ FAST PING:",
+          `${Date.now() - start}ms`
+        );
+      } catch (error) {
+        console.log(
+          "⚠️ FAST PING ERROR:",
+          error?.message || error
+        );
+      }
+      return;
+    }
+
     try {
       logger.debug?.(
         `[CMD DEBUG] command=${

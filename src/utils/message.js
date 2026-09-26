@@ -53,9 +53,11 @@ export async function sendError(conn, jid, error) {
  */
 export async function ackCommand(conn, message, emoji = UX.ACK_REACT) {
   try {
-    await conn.sendMessage(message.from, {
-      react: { text: emoji, key: message.key },
-    });
+    Promise.resolve(
+      conn.sendMessage(message.from, {
+        react: { text: emoji, key: message.key },
+      })
+    ).catch(() => {});
   } catch {
     // Non-fatal — some chats block reactions
   }
