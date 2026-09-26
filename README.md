@@ -1,4 +1,4 @@
-<div align="center">🦅 X-ANSARI MD
+<div align="center"><b>🦅 X-ANSARI MD</b>
 
 ⚡ Fast • Powerful • Modern WhatsApp Automation
 
@@ -17,7 +17,7 @@ A feature-rich WhatsApp bot built with Node.js & Baileys
   <b>🦅 Built for WhatsApp.</b>
 </p></div>---
 
-🌟 About X-ANSARI
+<b>🌟 About X-ANSARI</b>
 
 X-ANSARI MD is a modern, modular and feature-rich WhatsApp bot designed to provide a fast and powerful WhatsApp automation experience.
 
@@ -27,7 +27,7 @@ Built with Node.js and Baileys, X-ANSARI combines media tools, group management,
 
 ---
 
-✨ Features
+<b>✨ Features</b>
 
 ⚡ Core
 
@@ -73,7 +73,7 @@ Built with Node.js and Baileys, X-ANSARI combines media tools, group management,
 
 ---
 
-📦 Requirements
+<b>📦 Requirements</b>
 
 Before installing X-ANSARI, make sure your environment has:
 
@@ -88,7 +88,7 @@ SQLite| Included through Node package
 
 ---
 
-🚀 Installation
+<b>🚀 Installation</b>
 
 1️⃣ Clone the repository
 
@@ -150,7 +150,7 @@ Variable| Description
 
 ---
 
-▶️ Start X-ANSARI
+<b>▶️ Start X-ANSARI</b>
 
 Start the bot with:
 
@@ -160,7 +160,7 @@ The bot will initialize its database, plugins and WhatsApp connection.
 
 ---
 
-📱 WhatsApp Pairing
+<b>📱 WhatsApp Pairing</b>
 
 On first startup, follow the pairing/login instructions provided by the bot.
 
@@ -170,7 +170,7 @@ After authentication, the session is stored locally so the bot can reconnect wit
 
 ---
 
-🧩 Commands
+<b>🧩 Commands</b>
 
 The default command prefix is:
 
@@ -184,7 +184,7 @@ For example:
 
 ---
 
-⚡ General Commands
+<b>⚡ General Commands</b>
 
 Command| Description
 ".ping"| Check bot response
@@ -193,7 +193,7 @@ Command| Description
 
 ---
 
-👑 Owner Commands
+<b>👑 Owner Commands</b>
 
 Owner commands are restricted to authorized users.
 
@@ -205,7 +205,7 @@ Examples include:
 
 ---
 
-🛡️ Group Management
+<b>🛡️ Group Management</b>
 
 Depending on enabled plugins:
 
@@ -226,7 +226,7 @@ Additional group features may include:
 
 ---
 
-🎨 Media Commands
+<b>🎨 Media Commands</b>
 
 X-ANSARI provides various media utilities, including:
 
@@ -241,7 +241,7 @@ Available commands depend on the currently installed plugins.
 
 ---
 
-🤖 AutoReact
+<b>🤖 AutoReact</b>
 
 X-ANSARI includes a lightweight keyword-based automatic reaction system.
 
@@ -271,7 +271,7 @@ Supported reaction categories can include:
 
 ---
 
-🗂️ Project Structure
+<b>🗂️ Project Structure</b>
 
 X-ANSARI/
 │
@@ -306,7 +306,7 @@ X-ANSARI/
 
 ---
 
-🧩 Plugin System
+<b>🧩 Plugin System</b>
 
 X-ANSARI uses a modular command/plugin architecture.
 
@@ -328,7 +328,7 @@ This makes it easy to add, remove or maintain individual commands without modify
 
 ---
 
-⚡ Performance
+<b>⚡ Performance</b>
 
 X-ANSARI is designed around lightweight command processing.
 
@@ -353,7 +353,7 @@ Pong
 
 ---
 
-🎬 FFmpeg
+<b>🎬 FFmpeg</b>
 
 FFmpeg is required by several media-related commands.
 
@@ -369,7 +369,7 @@ pkg install ffmpeg
 
 ---
 
-🖥️ Deployment
+<b>🖥️ Deployment</b>
 
 X-ANSARI can run on multiple environments.
 
@@ -418,7 +418,7 @@ pm2 save
 
 ---
 
-🐳 Docker
+<b>🐳 Docker</b>
 
 A Docker-based deployment can be created using a Node.js 20+ image.
 
@@ -448,7 +448,7 @@ docker run -d --name x-ansari x-ansari
 
 ---
 
-🔐 Security
+<b>🔐 Security</b>
 
 Never expose:
 
@@ -470,7 +470,7 @@ logs/
 
 ---
 
-🛠️ Troubleshooting
+<b>🛠️ Troubleshooting</b>
 
 Bot does not start
 
@@ -517,7 +517,7 @@ SQLITE WORKING
 
 ---
 
-🔄 Updating
+<b>🔄 Updating</b>
 
 Before updating, make sure your local changes are committed.
 
@@ -535,7 +535,7 @@ npm start
 
 ---
 
-📌 Development
+<b>📌 Development</b>
 
 Clone the repository:
 
@@ -560,7 +560,7 @@ git push origin feature/my-feature
 
 ---
 
-🤝 Contributing
+<b>🤝 Contributing</b>
 
 Contributions, improvements and bug reports are welcome.
 
@@ -590,7 +590,7 @@ Please keep contributions:
 
 ---
 
-🐛 Bug Reports
+<b>🐛 Bug Reports</b>
 
 When reporting an issue, include:
 
